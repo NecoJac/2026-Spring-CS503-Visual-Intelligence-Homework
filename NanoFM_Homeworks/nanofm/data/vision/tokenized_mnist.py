@@ -123,7 +123,7 @@ def create_tokenized_mnist_dataloader(
             transforms.ToTensor()
         ])
 
-    dataset = MNIST(root='/tmp/mnist_data', train=train, download=True, transform=transform)
+    dataset = MNIST(root='./tmp/mnist_data', train=train, download=True, transform=transform)
 
     sampler = DistributedSampler(dataset, shuffle=shuffle) if distributed else None
 
