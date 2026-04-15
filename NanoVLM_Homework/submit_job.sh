@@ -26,7 +26,7 @@ HF_TOKEN="${2:?Usage: sbatch submit_job.sh <wandb_api_key> <huggingface_hub_toke
 NUM_GPUS="${3:-2}"
 
 # Hugging Face cache / Hub data root on the course shared volume (adjust if your path differs).
-export HF_HOME=/work/com-304/com-304-nanovlm-dataset/
+export HF_HOME=/work/cs-503/cs-503-nanovlm-dataset/
 
 # No Hub HTTP (avoids timeouts on compute nodes). Requires a complete cache under HF_HOME; comment out if downloads are needed.
 export HF_HUB_OFFLINE=1
