@@ -15,6 +15,9 @@ dependencies = [
     "mediapy",
     "loguru",
     "ipykernel",
+    "nbclient",
+    "nbconvert",
+    "notebook",
 ]
 
 [project.urls]

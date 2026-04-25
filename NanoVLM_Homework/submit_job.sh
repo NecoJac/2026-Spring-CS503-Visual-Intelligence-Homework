@@ -13,8 +13,7 @@
 # Batch-submit NanoVLM training on SCITAS (Izar).
 #
 # Usage:
-#   sbatch submit_job.sh <wandb_api_key> <huggingface_hub_token>
-
+#   sbatch submit_job.sh <wandb_api_key> <huggingface_hub_token> 2
 cd "${SLURM_SUBMIT_DIR:-.}"
 
 WANDB_KEY="${1:?Usage: sbatch submit_job.sh <wandb_api_key> <huggingface_hub_token>}"
@@ -55,6 +54,7 @@ else
   eval "$(conda shell.bash hook 2>/dev/null)" || true
 fi
 
+source /home/sjiang/.bashrc
 conda activate nanovlm
 
 echo "SLURM_JOB_ID=$SLURM_JOB_ID"

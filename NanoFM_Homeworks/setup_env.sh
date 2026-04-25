@@ -11,6 +11,7 @@ echo "Python version: $(python --version)"
 
 pip install --upgrade pip
 pip install torch torchvision wandb einops datasets transformers diffusers safetensors torchmetrics torch-fidelity huggingface-hub accelerate
+pip install nbconvert nbclient notebook
 pip install -e .
 pip install git+https://github.com/NVIDIA/Cosmos-Tokenizer.git --no-dependencies
 python -m ipykernel install --user --name nanofm --display-name "nano4M kernel (nanofm)"
